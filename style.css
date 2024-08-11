@@ -1,0 +1,33 @@
+datalist {
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+}
+
+option {
+    padding: 0;
+}
+
+input {
+    width: 500px;
+}
+
+#buttons {
+    padding: 6px;
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+
+
+}
+#basdai-calculated {
+    display: inline-block;
+}
+
+button {
+    padding: 6px;
+    background-color: gray;
+}
+button:hover {
+    background-color: lightskyblue;
+}

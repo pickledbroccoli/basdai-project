@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BASDAI input form</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+	<script src="index.js"></script>
+
+    <!-- basdai calculation: ((q1+q2+q3+q4) + ((q5+q6)/2))/5-->
+    <h1>Header placeholder for BASDAI</h1><br />
+    
+    <form>
+        <p>Please set the mark on each line below to indicate your answer to each question relating to the past week.</p>
+        <p>
+            <label for="fatigue">How would you describe the overall level of fatigue/tiredness you have
+experienced?</label><br />
+            <input type="range" min="0" max="10" step="1" name="fatigue" id="fatigue" list="severity-fatigue">
+        </p>
+
+        <datalist id="severity-fatigue">
+            <option value="0" label="NONE"></option>
+            <option value="10" label="VERY SEVERE"></option>
+        </datalist><br />
+
+        <p>
+            <label for="pain">How would you describe the overall level of AS neck, back or hip pain you have had? </label><br />
+            <input type="range" min="0" max="10" step="1" name="pain" id="neck" list="severity-pain">
+        </p>
+
+        <datalist id="severity-pain">
+            <option value="0" label="NONE"></option>
+            <option value="10" label="VERY SEVERE"></option>
+        </datalist><br />
+
+        <p>
+            <label for="other">How would you describe the overall level of pain/swelling in joints other than neck, back, hips you have had?</label><br />
+            <input type="range" min="0" max="10" step="1" name="other" id="other" list="severity-other">
+        </p>
+
+        <datalist id="severity-other">
+            <option value="0" label="NONE"></option>
+            <option value="10" label="VERY SEVERE"></option>
+        </datalist><br />
+
+        <p>
+            <label for="discomfort">How would you describe the overall level of discomfort you have had from any areas tender to touch or pressure?</label><br />
+            <input type="range" min="0" max="10" step="1" name="discomfort" id="discomfort" list="severity-discomfort">
+        </p>
+
+        <datalist id="severity-discomfort">
+            <option value="0" label="NONE"></option>
+            <option value="10" label="VERY SEVERE"></option>
+        </datalist><br />
+
+        <p>
+            <label for="stiffness">How would you describe the overall level of morning stiffness you have had from the time you wake up?
+</label><br />
+            <input type="range" min="0" max="10" step="1" name="stiffness" id="stiffness" list="severity-stiffness">
+        </p>
+
+        <datalist id="severity-stiffness">
+            <option value="0" label="NONE"></option>
+            <option value="10" label="VERY SEVERE"></option>
+        </datalist><br />
+
+        <p>
+            <label for="duration">How long does your morning stiffness last from the time you wake up?</label><br />
+            <input type="range" min="0" max="10" step="2.5" name="duration" id="duration" list="dur_val">
+        </p>
+
+        <datalist id="dur_val">
+            <option value="0" label="0 hrs"></option>
+            <option value="2.5" label="1/2 hr"></option>
+            <option value="5" label="1 hr"></option>
+            <option value="7.5" label="1 1/2 hrs"></option>
+            <option value="10" label="2+ hrs"></option>
+        </datalist><br />
+
+        <div id="buttons">
+            <button id="calulate-basdai">Calculate BASDAI</button>
+            <p id="basdai-calculated">Your BASDAI score is: </p>
+            <button id="submit-basdai">Submit</button>
+        </div>
+
+    </form>
+  </body>
+</html>
